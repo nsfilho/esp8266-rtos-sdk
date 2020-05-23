@@ -40,7 +40,6 @@ RUN apt-get update && apt-get install -y \
     curl wget python-pip \
     libncurses-dev build-essential flex bison gperf \
     gcc make python python-serial && \
-    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
     rm -rf /var/lib/apt/lists/*
 
 # Download SDK & Install python requirements
