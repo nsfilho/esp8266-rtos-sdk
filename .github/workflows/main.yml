@@ -18,16 +18,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Building docker image
         run: |
-          IMAGE_ID=nsfilho/${{ github.repository }}
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-          VERSION=3.3        
+          IMAGE_ID=nsfilho/esp8266-rtos-sdk
+          VERSION=3.3
           docker build --rm=true --force-rm=true -t $IMAGE_ID:$VERSION ./
       - name: Log into registry
         run: echo "${{ secrets.DOCKER_STORE_PASSWORD }}" | docker login docker.pkg.github.com -u ${{ secrets.DOCKER_STORE_USERNAME }} --password-stdin
       - name: Push image
         run: |
-          IMAGE_ID=nsfilho/${{ github.repository }}
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          IMAGE_ID=nsfilho/esp8266-rtos-sdk
           VERSION=3.3
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
