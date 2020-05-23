@@ -7,6 +7,6 @@ inputs:
     default: "defconfig all size-components"
 runs:
   using: "docker"
-  image: "./Dockerfile"
+  image: "docker://nsfilho/esp8266-rtos-sdk"
   args:
     - ${{ inputs.makearg }}
