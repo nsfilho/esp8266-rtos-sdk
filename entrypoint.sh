@@ -20,9 +20,9 @@
 # Repository: https://github.com/nsfilho/ESP8266-RTOS-SDK-Docker
 #
 
-COMMAND=$1
+COMMAND=$@
 
-if [ "x$1" = "x" ] ; then
+if [ "x$COMMAND" = "x" ] ; then
     make defconfig
     make all
     make size-components

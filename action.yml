@@ -1,0 +1,12 @@
+name: "Build Firmware"
+description: "Build Firmware"
+inputs:
+  makearg:
+    description: "Arguments to pass for make"
+    required: false
+    default: "defconfig all size-components"
+runs:
+  using: "docker"
+  image: "nsfilho/esp8266-rtos-sdk"
+  args:
+    - ${{ inputs.makearg }}
