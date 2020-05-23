@@ -1,5 +1,8 @@
-name: "Build Firmware"
-description: "Build Firmware"
+name: "ESP8266-RTOS-SDK (IDF Style) Build"
+description: "This action build your firmware directly in github using Espressif Native SDK and Toolkit."
+branding:
+  color: blue
+  icon: check
 inputs:
   makearg:
     description: "Arguments to pass for make"
