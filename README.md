@@ -6,7 +6,7 @@ The goal of this docker image is provide a complete isolated environment for bui
 
 ## Example
 
-You can see a sample of use in github actions on [E12AIO3 Firmware](https://github.com/e12aio3)
+You can see a sample of use in github actions on [E12AIO3 Firmware](https://github.com/nsfilho/e12aio3)
 
 ```yml
 name: ESP8266-RTOS-SDK Build
